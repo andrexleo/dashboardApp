@@ -9,6 +9,7 @@ import Ventas from "./components/dashboard/Ventas";
 import Home from "./pages/Home";
 import Signup from "./pages/SingIn";
 import Navbarcomponent from "./components/Navbar";
+import Login from "./pages/Login";
 
 export default function App() {
   React.useEffect(() => {
@@ -26,6 +27,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<Tablero />} />
           <Route path="ventas" element={<Ventas />} />

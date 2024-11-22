@@ -1,5 +1,5 @@
 import React from "react";
-import HeroBg from "../../assets/images/hero.jpg";
+import HeroBg from "../../assets/images/boda1.jpg";
 const BgStyle = {
   backgroundImage: `url(${HeroBg})`,
   backgroundRepeat: "no-repeat",
@@ -13,7 +13,7 @@ const Hero = () => {
     <>
       <div
         style={BgStyle}
-        className="min-h-[550px] sm:min-h-[600px] relative z-[-1] flex justify-center items-center mb-2"
+        className="min-h-[550px] sm:min-h-[800px] relative z-[-1] flex justify-center items-center mb-2"
       >
         <div className="container pb-8 sm:pb-0">
           <div className="grid grid-cols-1 sm:grid-cols-2">

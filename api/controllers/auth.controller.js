@@ -4,13 +4,13 @@ import { errorHandler } from '../utils/error.js';
 import jwt from 'jsonwebtoken';
 
 export const signup = async (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { name, email, password } = req.body;
 
   if (
-    !username ||
+    !name ||
     !email ||
     !password ||
-    username === '' ||
+    name === '' ||
     email === '' ||
     password === ''
   ) {
@@ -20,7 +20,7 @@ export const signup = async (req, res, next) => {
   const hashedPassword = bcryptjs.hashSync(password, 10);
 
   const newUser = new User({
-    username,
+    name,
     email,
     password: hashedPassword,
   });

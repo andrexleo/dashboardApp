@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo1.png";
+import Bg from "../assets/images/bgnav.jpg";
 import { useNavigate, Link } from "react-router-dom";
 import { FaMoon } from "react-icons/fa";
 
@@ -25,15 +26,18 @@ const Menu = [
 const Navbarcomponent = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
+  const handleNavigation = () => { 
     navigate("/signup");
+    navigate("/login");
+
+
   };
   return (
-    <Navbar className="border-b-2">
+    <Navbar color="gray" className="border-b-2">
       {/* Logo section */}
       <div data-aos="fade-down" data-aos-once="true">
         <Link to="/">
-          <img src={Logo} alt="Logo" className="w-52 " />
+          <img src={Logo} alt="Logo" className=" w-14 " />
         </Link>
       </div>
 
@@ -63,14 +67,16 @@ const Navbarcomponent = () => {
           <FaMoon />
         </Button>
         <Button
-          onClick={handleNavigation}
+          onClick={handleNavigation 
+            
+          }
           /*className=" bg-green-600 hover:bg-black duration-200 text-gray-900 px-4 py-2 rounded-md flex items-center gap-3"*/
           outline
             color="green"
             pill
           className="items-center"
         >
-          Iniciar Sesion
+          Iniciar Sesión
         </Button>
         <Button
           onClick={handleNavigation}
